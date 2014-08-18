@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.6
+-- version 4.1.12
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 2014-08-18 15:53:50
+-- Generation Time: 2014-08-18 17:06:29
 -- 服务器版本： 5.6.16
--- PHP Version: 5.5.9
+-- PHP Version: 5.5.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `mylove`
+-- Database: `test`
 --
 
 -- --------------------------------------------------------
@@ -31,6 +31,7 @@ CREATE TABLE IF NOT EXISTS `love` (
   `me` text NOT NULL,
   `you` text NOT NULL,
   `date` time NOT NULL,
+  `result` varchar(10) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
@@ -38,12 +39,12 @@ CREATE TABLE IF NOT EXISTS `love` (
 -- 转存表中的数据 `love`
 --
 
-INSERT INTO `love` (`id`, `me`, `you`, `date`) VALUES
-(1, '18630653824', '18007318639', '21:51:06'),
-(2, '18007318639', '18630653824', '21:51:40'),
-(3, '18811437730', '18811437405', '00:00:00'),
-(4, '18811437405', '18811437730', '00:00:00'),
-(5, '18210854168', '18630653824', '00:00:00');
+INSERT INTO `love` (`id`, `me`, `you`, `date`, `result`) VALUES
+(1, '18630653824', '18007318639', '21:51:06', ''),
+(2, '18007318639', '18630653824', '21:51:40', ''),
+(3, '18811437730', '18811437405', '00:00:00', ''),
+(4, '18811437405', '18811437730', '00:00:00', ''),
+(5, '18210854168', '18630653824', '00:00:00', '');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
