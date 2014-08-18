@@ -28,7 +28,7 @@ if(t1.length != 11 || t2.length != 11){
 </script>
 <body>
 	<?php echo $showtime=date("Y-m-d H:i:s");?>
-	<form method="post" action="doAction.php"  onsubmit="return doCheck()" name="regist">
+	<form method="post" action="doaction.php"  onsubmit="return doCheck()" name="regist">
 		<ul class="login">
 			<li class="l_tit">你的手机号</li>
 			<li ><input type="text"  name="number1" placeholder="你的手机号" class="login_input user_icon"></li>
