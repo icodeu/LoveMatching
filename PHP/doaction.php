@@ -1,6 +1,5 @@
 <?php
-require_once 'mysql.func.php';
-connect();
+include 'mysql_connect.php';
 
 $time=date("Y-m-d H:i:s");
 $false = "false";
