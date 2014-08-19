@@ -31,10 +31,12 @@
 		}
 	</script>
 
-	<body background="images/main_back.png">
+	<body style="background-image: url(images/main_back.png); background-repeat:round">
 		<?php $showtime = date("Y-m-d H:i:s"); ?>
 		<div class="container">
-			<img src="images/header.png" width="300">
+			<img src="images/title.png" width="300"/>
+			<br />
+			<img src="images/text1.png" width="300">
 			<form class="form-horizontal" role="form" method="post" action="doaction.php" onsubmit="return doCheck()" name="regist">
 				<div class="form-group">
 					<label for="inputEmail3" class="col-sm-2 control-label">
@@ -57,17 +59,21 @@
 				<div class="form-group">
 					<div class="col-sm-offset-2 col-sm-10">
 						<center>
-							<button type="submit" class="btn btn-default btn-success">提交匹配</button>
+							<button type="submit" class="btn btn-default btn-success">提交</button>
 						</center>
 					</div>
 				</div>
 			</form>
+			<form action="showResult.php" method="post">
+				<center><button type="submit" class="btn btn-default btn-info">看看谁都破了窗户纸</button></center>
+			</form>
 			</center>
+			<br />
 			<img src="images/text2.png" />
 			<br />
 			<br />
 			<div class="alert alert-success" role="alert">
-				<p style="font-size: small;">*注：本程序开发者为学生，不会泄露贵手机号，请放心使用，有问题尽可找作者的麻烦哈~</p>
+				<p style="font-size: small;">*注：本程序开发者为学生，不会泄露贵手机号，请放心使用，有问题尽可找作者的麻烦哈~ 同时欢迎点击右上角分享至朋友圈，让更多的小伙伴有机会一起来捅破窗户纸O(∩_∩)O</p>
 			</div>
 			<hr />
 			<div class="container">

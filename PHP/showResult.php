@@ -7,16 +7,16 @@
 <title>showResult</title>
 </head>
 
-<body background="images/bg.png">
+<body background="images/bg-result.png">
     <?php
         include "mysql_connect.php";
         $result = mysql_query("SELECT * FROM success");
 	?> 
     <div class="container" style="width:300px">
-    	<h1>已成功捅破窗户纸</h1>
+    	<center><img src="images/heart7.png" width="100"/></center>
     <?php
 	    echo '<table class="table table-bordered">';
-		echo '<tr><th>Ta</th><th>Ta</th><th>捅破时间</th></tr>';
+		echo '<tr><th>Ta</th><th>Ta</th><th>破窗时间</th></tr>';
         while ($row = mysql_fetch_array($result))
         {
 			//进行加密处理
@@ -34,7 +34,7 @@
             echo "</tr>";
         }
 	?>
-    </div>
+
 </body>
 <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
 <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
