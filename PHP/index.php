@@ -30,7 +30,7 @@ if(t1.length != 11 || t2.length != 11){
 </script>
 <body background="images/bg.png">
 	<?php $showtime=date("Y-m-d H:i:s");?>
-    <div class="container">
+    <div class="container" style="width:300px">
      	<img src="images/header.png" width="300">
     	<form class="form-horizontal" role="form"  method="post" action="doaction.php"  onsubmit="return doCheck()" name="regist">
           <div class="form-group">
