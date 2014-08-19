@@ -21,11 +21,14 @@ function Post($data, $target) {
 }
 
 include 'mysql_connect.php';
-$result = mysql_query("SELECT * FROM success WHERE send='false'");
+$result = mysql_query("SELECT * FROM success WHERE send=0");
 while($row=mysql_fetch_array($result))
 {
 	$tel1 = $row['tel1'];
 	$tel2 = $row['tel2'];
+	
+	echo $tel1;
+	echo $tel2;
 	
 	$target = "http://sms.106jiekou.com/utf8/sms.aspx";
 	//替换成自己的测试账号,参数顺序和wenservice对应
@@ -34,6 +37,8 @@ while($row=mysql_fetch_array($result))
 	
 	$post_data = "account=icodeyou&password=qinaidaqiqi&mobile=".$tel2."&content=".rawurlencode("您的验证码是："."【恭喜！您和".$tel1."捅破了窗户纸~】"."。请不要把验证码泄露给其他人。如非本人操作，可不用理会！");
 	echo $gets = Post($post_data, $target);
+	
+	mysql_query("UPDATE success SET send = 1 WHERE tel1 = ".$tel1);
 }
 
 ?>

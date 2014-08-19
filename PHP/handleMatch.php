@@ -26,7 +26,7 @@
 				mysql_query("UPDATE love SET result = 'true' WHERE me = ".$success_you." AND you = ".$success_me);
 				
 				//写入success的数据表
-				mysql_query("INSERT INTO success (tel1, tel2, send) VALUES (".$success_me.",".$success_you.",false)");
+				mysql_query("INSERT INTO success (tel1, tel2, send) VALUES (".$success_me.",".$success_you.","."false".")");
 			}
  		}
 	}
