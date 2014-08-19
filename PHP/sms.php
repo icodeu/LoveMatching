@@ -20,12 +20,20 @@ function Post($data, $target) {
     return $gets;
 }
 
-$target = "http://sms.106jiekou.com/utf8/sms.aspx";
-//替换成自己的测试账号,参数顺序和wenservice对应
-$post_data = "account=icodeyou&password=qinaidaqiqi&mobile=18210854168&content=".rawurlencode("您的验证码是：ILoveYou。请不要把验证码泄露给其他人。如非本人操作，可不用理会！");
+include 'mysql_connect.php';
+$result = mysql_query("SELECT * FROM success WHERE send='false'");
+while($row=mysql_fetch_array($result))
+{
+	$tel1 = $row['tel1'];
+	$tel2 = $row['tel2'];
+	
+	$target = "http://sms.106jiekou.com/utf8/sms.aspx";
+	//替换成自己的测试账号,参数顺序和wenservice对应
+	$post_data = "account=icodeyou&password=qinaidaqiqi&mobile=".$tel1."&content=".rawurlencode("您的验证码是："."【恭喜！您和".$tel2."捅破了窗户纸~】"."。请不要把验证码泄露给其他人。如非本人操作，可不用理会！");
+	echo $gets = Post($post_data, $target);
+	
+	$post_data = "account=icodeyou&password=qinaidaqiqi&mobile=".$tel2."&content=".rawurlencode("您的验证码是："."【恭喜！您和".$tel1."捅破了窗户纸~】"."。请不要把验证码泄露给其他人。如非本人操作，可不用理会！");
+	echo $gets = Post($post_data, $target);
+}
 
-echo $gets = Post($post_data, $target);
-
-//请自己解析$gets字符串并实现自己的逻辑
-//100 表示成功,其它的参考文档
 ?>
