@@ -67,7 +67,7 @@
 			<br />
 			<br />
 			<div class="alert alert-success" role="alert">
-				<p style="font-size: small;">注：本程序开发者为学生，不会泄露贵手机号，请放心使用，有问题尽可找作者的麻烦哈~</p>
+				<p style="font-size: small;">*注：本程序开发者为学生，不会泄露贵手机号，请放心使用，有问题尽可找作者的麻烦哈~</p>
 			</div>
 			<hr />
 			<div class="container">
