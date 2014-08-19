@@ -32,10 +32,10 @@ while($row=mysql_fetch_array($result))
 	
 	$target = "http://sms.106jiekou.com/utf8/sms.aspx";
 	//替换成自己的测试账号,参数顺序和wenservice对应
-	$post_data = "account=icodeyou&password=qinaidaqiqi&mobile=".$tel1."&content=".rawurlencode("您的验证码是："."【恭喜！您和".$tel2."捅破了窗户纸~】"."。请不要把验证码泄露给其他人。如非本人操作，可不用理会！");
+	$post_data = "account=icodeyou&password=qinaidaqiqi&mobile=".$tel1."&content=".rawurlencode("订单号 ："."【恭喜！您和".$tel2."捅破了窗户纸~】"." 买家已确认收货！");
 	echo $gets = Post($post_data, $target);
 	
-	$post_data = "account=icodeyou&password=qinaidaqiqi&mobile=".$tel2."&content=".rawurlencode("您的验证码是："."【恭喜！您和".$tel1."捅破了窗户纸~】"."。请不要把验证码泄露给其他人。如非本人操作，可不用理会！");
+	$post_data = "account=icodeyou&password=qinaidaqiqi&mobile=".$tel2."&content=".rawurlencode("订单号 ："."【恭喜！您和".$tel1."捅破了窗户纸~】"." 买家已确认收货！");
 	echo $gets = Post($post_data, $target);
 	
 	mysql_query("UPDATE success SET send = 1 WHERE tel1 = ".$tel1);
