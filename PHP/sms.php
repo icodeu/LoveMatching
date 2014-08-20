@@ -21,34 +21,6 @@ function Post($data, $target) {
 }
 
 include 'mysql_connect.php';
-<<<<<<< HEAD
-//while(true)
-//{
-	$result = mysql_query("SELECT * FROM success WHERE send=0");
-	while($row=mysql_fetch_array($result))
-	{
-		$tel1 = $row['tel1'];
-		$tel2 = $row['tel2'];
-		
-		echo $tel1;
-		echo $tel2;
-		
-		$target = "http://sms.106jiekou.com/utf8/sms.aspx";
-		//替换成自己的测试账号,参数顺序和wenservice对应
-		$post_data = "account=icodeyou&password=qinaidaqiqi&mobile=".$tel1."&content=".rawurlencode("您的订单编码：【"."恭喜！您和".$tel2."成功捅破了窗户纸~"."】。如需帮助请联系客服。");
-		echo $gets = Post($post_data, $target);
-		
-		$post_data = "account=icodeyou&password=qinaidaqiqi&mobile=".$tel2."&content=".rawurlencode("您的订单编码：【"."恭喜！您和".$tel1."成功捅破了窗户纸~"."】。如需帮助请联系客服。");
-		echo $gets = Post($post_data, $target);
-		
-		$return_code = substr($gets,strlen($gets)- 3,3);
-		
-		echo "结果码".$return_code;
-		if($return_code=="100")
-			mysql_query("UPDATE success SET send = 1 WHERE tel1 = ".$tel1);
-	}
-//}
-=======
 $result = mysql_query("SELECT * FROM success WHERE send=0");
 while($row=mysql_fetch_array($result))
 {
@@ -72,6 +44,5 @@ while($row=mysql_fetch_array($result))
 	if($return_code=="100")
 		mysql_query("UPDATE success SET send = 1 WHERE tel1 = ".$tel1);
 }
->>>>>>> ce43a5c0c466635cf61a6fafb058411992b73f0d
 
 ?>
