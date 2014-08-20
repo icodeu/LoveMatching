@@ -22,11 +22,11 @@
 			//进行加密处理
 			$tel1 = substr($row['tel1'],0,3);
 			$tel1 .= '****';
-			$tel1 .= substr($row['tel1'],6,4);
+			$tel1 .= substr($row['tel1'],7,4);
 			
 			$tel2 = substr($row['tel2'],0,3);
 			$tel2 .= '****';
-			$tel2 .= substr($row['tel2'],6,4);
+			$tel2 .= substr($row['tel2'],7,4);
 			
 			
 			echo '<tr>';

@@ -10,7 +10,7 @@
 <?php
 include 'mysql_connect.php';
 
-$time=date("Y-m-d H:i:s");
+$time=date("Y-m-d");
 $false = "false";
 $number1 = $_POST["number1"];
 $number2 = $_POST["number2"];
@@ -19,7 +19,7 @@ mysql_query($sql) or die(mysql_error());
 ?>
 
 <script language='javascript' type='text/javascript'> 
-	alert("提交成功，点击确定后返回");
+	alert("提交成功，当你喜欢的人同样喜欢你后系统会在第一时间自动向你发送短信通知，~点击确定后返回");
 	window.location.href='index.php'
 </script> 
 </html>
