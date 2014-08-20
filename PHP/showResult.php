@@ -12,7 +12,7 @@
         include "mysql_connect.php";
         $result = mysql_query("SELECT * FROM success");
 	?> 
-    <div class="container" style="width:300px">
+    <div class="container">
     	<center><img src="images/heart7.png" width="100"/></center>
     <?php
 	    echo '<table class="table table-bordered">';
@@ -28,9 +28,11 @@
 			$tel2 .= '****';
 			$tel2 .= substr($row['tel2'],7,4);
 			
+			$success_date = substr($row['date'], 0, 10);
+			
 			
 			echo '<tr>';
-            echo '<td>'.$tel1.'</td>'.'<td>'.$tel2.'</td>'.'<td>'.$row['date'].'</td>';
+            echo '<td>'.$tel1.'</td>'.'<td>'.$tel2.'</td>'.'<td>'.$success_date.'</td>';
             echo "</tr>";
         }
 	?>

@@ -33,7 +33,6 @@
 
 	<body style="background-image: url(images/main_back.png); background-repeat:round">
 		<?php $showtime = date("Y-m-d"); 
-			echo $showtime;
 		?>
 		<div class="container">
 			<img src="images/title.png" width="300"/>

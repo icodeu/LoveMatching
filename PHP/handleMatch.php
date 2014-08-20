@@ -1,8 +1,8 @@
 <?php
 	include "mysql_connect.php";
 	
-	while(true)
-	{
+	//while(true)
+	//{
 		$result = mysql_query("SELECT * FROM love WHERE result='false'");
 	
 		while ($row = mysql_fetch_array($result))
@@ -34,6 +34,6 @@
 				}
 			}
 		}
-	}
+	//}
 
 ?>
