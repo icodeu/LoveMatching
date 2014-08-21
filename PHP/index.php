@@ -5,14 +5,14 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
-		<title>登陆</title>
+		<title>一起来捅窗户纸~最灵验表白神器！</title>
 	</head>
 	<script>
 		function doCheck() {
 			var flag = 1;
 			if (document.regist.name.value == "") {
 
-				alert('请输入你的用户名！');
+				alert('请输入号码好嘛么么哒！');
 				flag = 0;
 			}
 			if (document.regist.number1.value == "" || document.regist.number2.value == "") {
@@ -23,7 +23,7 @@
 			var t2 = document.regist.number2.value;
 			if (t1.length != 11 || t2.length != 11) {
 				flag = 0;
-				alert('输入位数不正确');
+				alert('输入位数不正确，你爱的人是地球来的嘛');
 			}
 			if (flag == 1)
 				return true;
@@ -66,7 +66,7 @@
 				</div>
 			</form>
 			<form action="showResult.php" method="post">
-				<center><button type="submit" class="btn btn-default btn-info">看看谁都破了窗户纸</button></center>
+				<center><button type="submit" class="btn btn-default btn-info">看看谁捅破了窗户纸</button></center>
 			</form>
 			</center>
 			<br />
@@ -74,7 +74,7 @@
 			<br />
 			<br />
 			<div class="alert alert-success" role="alert">
-				<p style="font-size: small;">*注：本程序开发者为学生，不会泄露贵手机号，请放心使用，有问题尽可找作者的麻烦哈~ 同时欢迎点击右上角分享至朋友圈，让更多的小伙伴有机会一起来捅破窗户纸O(∩_∩)O</p>
+				<p style="font-size: small;">*注：本程序开发者为学生，不会泄露贵手机号，请放心使用，有问题尽可找作者的麻烦哈~ 系统自动发短信费用全部由作者承担，祝大家捅窗户纸愉快~同时欢迎点击右上角分享至朋友圈，让更多的小伙伴有机会一起来捅破窗户纸O(∩_∩)O</p>
 			</div>
 			<hr />
 			<div class="container">
