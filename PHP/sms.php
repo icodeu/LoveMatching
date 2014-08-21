@@ -1,5 +1,10 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="refresh" content="60">
+	</head>
+	<body>
 <?php
-header("Content-Type: text/html; charset=utf-8");
 function Post($data, $target) {
     $url_info = parse_url($target);
     $httpheader = "POST " . $url_info['path'] . " HTTP/1.0\r\n";
@@ -32,10 +37,10 @@ while($row=mysql_fetch_array($result))
 	
 	$target = "http://sms.106jiekou.com/utf8/sms.aspx";
 	//替换成自己的测试账号,参数顺序和wenservice对应
-	$post_data = "account=icodeyou&password=qinaidaqiqi&mobile=".$tel1."&content=".rawurlencode("您的订单编码：【"."恭喜！您和".$tel2."成功捅破了窗户纸~分享至朋友圈让更多人一起来捅破窗户纸~"."】。如需帮助请联系客服。");
+	$post_data = "account=icodeyou&password=qinaidaqiqi&mobile=".$tel1."&content=".rawurlencode("您的订单编码：【"."恭喜！您和".$tel2."成功捅破了窗户纸~分享至朋友圈一起来捅破窗户纸~"."】。如需帮助请联系客服。");
 	echo $gets = Post($post_data, $target);
 	
-	$post_data = "account=icodeyou&password=qinaidaqiqi&mobile=".$tel2."&content=".rawurlencode("您的订单编码：【"."恭喜！您和".$tel1."成功捅破了窗户纸~分享至朋友圈让更多人一起来捅破窗户纸~"."】。如需帮助请联系客服。");
+	$post_data = "account=icodeyou&password=qinaidaqiqi&mobile=".$tel2."&content=".rawurlencode("您的订单编码：【"."恭喜！您和".$tel1."成功捅破了窗户纸~分享至朋友圈一起来捅破窗户纸~"."】。如需帮助请联系客服。");
 	echo $gets = Post($post_data, $target);
 	
 	$return_code = substr($gets,strlen($gets)- 3,3);
@@ -46,3 +51,6 @@ while($row=mysql_fetch_array($result))
 }
 
 ?>
+	  
+	</body>
+</html>
