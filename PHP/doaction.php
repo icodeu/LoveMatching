@@ -5,12 +5,12 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
-		<title>登陆</title>
+		<title>已提交给服务器处理</title>
 	</head>
 <?php
 include 'mysql_connect.php';
 
-//给number2发短信
+//给number2发短信告知被暗恋
 function Post($data, $target) {
     $url_info = parse_url($target);
     $httpheader = "POST " . $url_info['path'] . " HTTP/1.0\r\n";
@@ -32,11 +32,11 @@ function Post($data, $target) {
 }
 
 $target = "http://sms.106jiekou.com/utf8/sms.aspx";
-	//替换成自己的测试账号,参数顺序和wenservice对应
-	$post_data = "account=icodeyou&password=qinaidaqiqi&mobile=".$_POST["number2"]."&content=".rawurlencode("您的订单编码：【恭喜！有人在朋友圈说暗恋你，主动想捅破窗户纸~疯传‘捅破窗户纸‘应用，快去看看^_^】。如需帮助请联系客服。");
-	echo $gets = Post($post_data, $target);
-	$return_code = substr($gets,strlen($gets)- 3,3);
-	echo "结果码".$return_code;
+	$post_data = "account=xxxxx&password=xxxxx&mobile=".$_POST["number2"]."&content=".rawurlencode("您的订单编码：【恭喜！有人在朋友圈说暗恋你，主动想捅破窗户纸~疯传‘捅破窗户纸‘应用，快去看看^_^】。如需帮助请联系客服。");
+//于2014-8-21日晚9:30注释掉
+//	$gets = Post($post_data, $target);
+//$return_code = substr($gets,strlen($gets)- 3,3);
+//echo "结果码".$return_code;
 
 $time=date("Y-m-d");
 $false = "false";
