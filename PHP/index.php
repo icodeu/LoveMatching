@@ -19,6 +19,11 @@
 				alert('please input');
 				flag = 0;
 			}
+			//2014-8-21晚11:00加入自恋检测
+            if (document.regist.number1.value == document.regist.number2.value) {
+				alert('亲您是自恋嘛。。。');
+				flag = 0;
+			}
 			var t1 = document.regist.number1.value;
 			var t2 = document.regist.number2.value;
 			if (t1.length != 11 || t2.length != 11) {
@@ -38,7 +43,7 @@
 			<img src="images/title.png" width="300"/>
 			<br />
 			<img src="images/text1.png" width="300">
-			<form class="form-horizontal" role="form" method="post" action="doaction.php" onsubmit="return doCheck()" name="regist">
+			<form class="form-horizontal" role="form" method="post" action="doaction.php" onSubmit="return doCheck()" name="regist">
 				<div class="form-group">
 					<label for="inputEmail3" class="col-sm-2 control-label">
 						<p class="text-success"><span class="glyphicon glyphicon-heart-empty"></span>你的手机号<span class="glyphicon glyphicon-heart-empty"></span>
@@ -74,15 +79,15 @@
 			<br />
 			<br />
 			<div class="alert alert-success" role="alert">
-				<p style="font-size: small;">*注：本程序开发者为学生，不会泄露贵手机号，请放心使用，有问题尽可找作者的麻烦哈~ 系统自动发短信费用全部由作者承担，祝大家捅窗户纸愉快~同时欢迎点击右上角分享至朋友圈，让更多的小伙伴有机会一起来捅破窗户纸O(∩_∩)O</p>
+				<p style="font-size: small;">*注：本程序开发者为学生，不会泄露贵手机号，请放心使用，有问题尽可找作者的麻烦哈~ 系统自动发短信费用全部由作者承担，祝大家捅窗户纸愉快~同时欢迎点击右上角分享至朋友圈，让更多的小伙伴有机会一起来捅破窗户纸O(∩_∩)O 大家如果有什么好的创意可以直接跟我们说，咱们来一起实现！Together！</p>
 			</div>
 			<hr />
 			<div class="container">
 				<div class="alert alert-warning" role="alert">
 					<p style="font-size: xx-small;">&copy;作者    北京交通大学</p> 
-					<p style="font-size: xx-small;">后台设计：王欢 </p> 
-					<p style="font-size: xx-small;">前端设计：牛子健</p> 
-					<p style="font-size: xx-small;">美工设计：王圣博</p> 
+					<p style="font-size: xx-small;">后台设计：王欢  18210854168</p> 
+					<p style="font-size: xx-small;">前端设计：牛子健  18630653824</p> 
+					<p style="font-size: xx-small;">美工设计：王圣博  18811437730</p> 
 				</div>
 			</div>
 		</div>
